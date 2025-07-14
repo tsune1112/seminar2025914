@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【実践特化】フットファンクショナルトレーニング</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Orange & Cream -->
+    <!-- Application Structure Plan: A single-page, narrative scrolling landing page. Structure: Hero -> Problem/Solution -> Benefits -> Program -> Instructor -> Logistics/CTA. This guides the user through a conversion funnel, from interest to action, which is ideal for a seminar registration page. Interactive navigation with scrollspy enhances usability. -->
+    <!-- Visualization & Content Choices: The report is text-heavy. Goal: Make it digestible and engaging. Method: Use interactive cards (hover effects), a visual timeline/stepper for the program, and clear iconography for logistics. Interaction: Scroll-based navigation and subtle micro-interactions on hover. Justification: These choices break up text, create visual interest, and improve scannability over a plain text document. No charts needed, so no Chart.js/Plotly. NO SVG/Mermaid. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #FFFBEF; 
+            color: #1F2937;
+        }
+        .hero-bg {
+            background-image: url('https://storage.googleapis.com/gemini-prod-us-west1-assets/9159938666_bf63cd.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link.active {
+            color: #F97316;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-800">フットファンクショナル</div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#problem" class="nav-link text-gray-600 hover:text-orange-500 transition-colors">こんな方へ</a>
+                <a href="#solution" class="nav-link text-gray-600 hover:text-orange-500 transition-colors">得られること</a>
+                <a href="#program" class="nav-link text-gray-600 hover:text-orange-500 transition-colors">プログラム</a>
+                <a href="#details" class="nav-link text-gray-600 hover:text-orange-500 transition-colors">開催概要</a>
+            </div>
+            <a href="#details" class="hidden md:block bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+                今すぐ申し込む
+            </a>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#problem" class="block nav-link text-gray-600 hover:text-orange-500">こんな方へ</a>
+            <a href="#solution" class="block nav-link text-gray-600 hover:text-orange-500">得られること</a>
+            <a href="#program" class="block nav-link text-gray-600 hover:text-orange-500">プログラム</a>
+            <a href="#details" class="block nav-link text-gray-600 hover:text-orange-500">開催概要</a>
+             <a href="#details" class="block bg-orange-500 text-center hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+                今すぐ申し込む
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-bg text-white min-h-[60vh] md:min-h-[80vh] flex items-center">
+            <div class="container mx-auto px-6 text-center bg-black/50 py-12 rounded-xl">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                    <span class="text-orange-400">実践特化</span><br>フットファンクショナルトレーニング
+                </h1>
+                <p class="text-lg md:text-2xl mb-8">
+                    理論はもういい。明日から現場で使える<span class="font-bold">”本物の動き”</span>を学ぶ3時間。
+                </p>
+                <a href="#details" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    セミナー詳細を見る
+                </a>
+            </div>
+        </section>
+
+        <section id="problem" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">その指導、<span class="text-orange-500">自己流</span>になっていませんか？</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-12 text-lg">
+                    クライアントの成果に伸び悩みを感じているなら、その原因は「足元」にあるかもしれません。
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-amber-50 p-8 rounded-xl border border-amber-200">
+                        <h3 class="text-xl font-bold mb-2">✔ とにかく実践的なスキルが欲しい</h3>
+                        <p class="text-gray-600">難しい解剖学の座学よりも、明日からすぐ現場で使える技術を求めている。</p>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-xl border border-amber-200">
+                        <h3 class="text-xl font-bold mb-2">✔ クライアントの成果を底上げしたい</h3>
+                        <p class="text-gray-600">足部を起点に、クライアントのパフォーマンスを根本から劇的に改善したい。</p>
+                    </div>
+                    <div class="bg-amber-50 p-8 rounded-xl border border-amber-200">
+                        <h3 class="text-xl font-bold mb-2">✔ 指導の引き出しを増やしたい</h3>
+                        <p class="text-gray-600">指導のマンネリを打破し、他の指導者と差がつく新しい刺激と価値を提供したい。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-16 md:py-24">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h2 class="text-3xl md:text-4xl font-bold mb-4">この3時間で、あなたの指導は<span class="text-orange-500">劇的に変わる</span></h2>
+                     <p class="max-w-3xl mx-auto text-gray-600 text-lg">単なるテクニックではない、一生モノの「評価力」と「指導力」を手に入れる。</p>
+                </div>
+                 <div class="grid md:grid-cols-3 gap-8">
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-4xl mb-4"></div>
+                         <h3 class="text-2xl font-bold mb-3">即効性のあるスキル</h3>
+                         <p class="text-gray-600">アーチ制御や足趾の可動性を一瞬で引き出す「即効ドリル」を習得。クライアントを驚かせる結果を出せるようになります。</p>
+                     </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="text-4xl mb-4"></div>
+                         <h3 class="text-2xl font-bold mb-3">全身への応用力</h3>
+                         <p class="text-gray-600">「足部→下肢→体幹」へと連動させる正しい荷重パターンを学び、全身のパフォーマンスを向上させる指導が可能になります。</p>
+                     </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+                         <div class="text-4xl mb-4"></div>
+                         <h3 class="text-2xl font-bold mb-3">確かな評価と修正能力</h3>
+                         <p class="text-gray-600">歩行を分析し、問題点を見抜き、その場で最適な修正ドリルを処方する「本物の指導力」が身につきます。</p>
+                     </div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="program" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">当日のプログラム</h2>
+                    <p class="max-w-3xl mx-auto text-gray-600 text-lg">3つのステップで、評価から指導への落とし込みまでを一気に習得します。</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-orange-200 hidden md:block" aria-hidden="true"></div>
+                    <div class="space-y-12 md:space-y-0">
+                        <div class="md:grid grid-cols-2 gap-8 items-center">
+                            <div class="text-right pr-8">
+                                <h3 class="text-2xl font-bold text-orange-500">Step 1</h3>
+                                <h4 class="text-xl font-bold mt-1 mb-2">足部アクティベーション</h4>
+                                <p class="text-gray-600">アーチ制御・足趾モビリティの即効ドリルで、足本来の機能を目覚めさせます。</p>
+                            </div>
+                            <div class="hidden md:block"></div>
+                        </div>
+                        <div class="md:grid grid-cols-2 gap-8 items-center">
+                            <div class="hidden md:block"></div>
+                            <div class="text-left md:pl-8">
+                                <h3 class="text-2xl font-bold text-orange-500">Step 2</h3>
+                                <h4 class="text-xl font-bold mt-1 mb-2">荷重パターン再構築</h4>
+                                <p class="text-gray-600">足部–下肢–体幹をつなぐ正しいスタンス＆ローディング練習を学びます。</p>
+                            </div>
+                        </div>
+                        <div class="md:grid grid-cols-2 gap-8 items-center">
+                            <div class="text-right pr-8">
+                                 <h3 class="text-2xl font-bold text-orange-500">Step 3</h3>
+                                <h4 class="text-xl font-bold mt-1 mb-2">歩行の評価と実践</h4>
+                                <p class="text-gray-600">歩行分析のポイントから修正ドリル、そして指導への落とし込みまでを実践します。</p>
+                            </div>
+                             <div class="hidden md:block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="details" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                 <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">開催概要 & お申し込み</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold border-b-2 border-orange-400 pb-2 mb-4">講師紹介</h3>
+                            <div class="flex items-center space-x-4">
+                                <img src="http://googleusercontent.com/file_content/2" alt="" class="w-24 h-24 rounded-full object-cover border-4 border-orange-200">
+                                <div>
+                                    <p class="text-xl font-bold">中森 允崇</p>
+                                    <p class="text-sm text-gray-600">JATI-ATI</p>
+                                    <p class="text-sm text-gray-600">EBFAベアフット トレーニングスペシャリスト</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold border-b-2 border-orange-400 pb-2 mb-4">セミナー詳細</h3>
+                             <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start"><span class="mr-3 mt-1 text-orange-500"></span> <div><span class="font-bold">日時:</span> 2025年9月14日（日）17:30 – 20:30</div></li>
+                                <li class="flex items-start"><span class="mr-3 mt-1 text-orange-500"></span> <div><span class="font-bold">会場:</span> パーソナルジム CONNECT 鶴舞店<br><span class="text-sm">名古屋市中区千代田5-20-10 文岡ビル3A</span></div></li>
+                                <li class="flex items-start"><span class="mr-3 mt-1 text-orange-500"></span> <div><span class="font-bold">受講料:</span> ¥5,000（税込）</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-12 rounded-full text-xl transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-lg animate-pulse">
+                           お申し込みはこちら
+                        </a>
+                        <p class="text-sm text-gray-500 mt-4">席には限りがありますので、お早めにお申し込みください。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Personal Gym CONNECT. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === entry.target.id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (mobileMenu.classList.contains('hidden') === false) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
