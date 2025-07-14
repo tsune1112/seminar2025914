@@ -6,6 +6,7 @@
     <title>【実践特化】フットファンクショナルトレーニング</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23F97316%22/></svg>">
     <!-- Chosen Palette: Warm Orange & Cream -->
     <!-- Application Structure Plan: A single-page, narrative scrolling landing page. Structure: Hero -> Problem/Solution -> Benefits -> Program -> Instructor -> Logistics/CTA. This guides the user through a conversion funnel, from interest to action, which is ideal for a seminar registration page. Interactive navigation with scrollspy enhances usability. -->
     <!-- Visualization & Content Choices: The report is text-heavy. Goal: Make it digestible and engaging. Method: Use interactive cards (hover effects), a visual timeline/stepper for the program, and clear iconography for logistics. Interaction: Scroll-based navigation and subtle micro-interactions on hover. Justification: These choices break up text, create visual interest, and improve scannability over a plain text document. No charts needed, so no Chart.js/Plotly. NO SVG/Mermaid. -->
@@ -17,7 +18,7 @@
             color: #1F2937;
         }
         .hero-bg {
-            background-image: url('https://storage.googleapis.com/gemini-prod-us-west1-assets/9159938666_bf63cd.jpg');
+            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -164,17 +165,12 @@
             <div class="container mx-auto px-6">
                  <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl max-w-4xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">開催概要 & お申し込み</h2>
-                    <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-8">
                         <div>
                             <h3 class="text-xl font-bold border-b-2 border-orange-400 pb-2 mb-4">講師紹介</h3>
-                            <div class="flex items-center space-x-4">
-                                <img src="http://googleusercontent.com/file_content/2" alt="" class="w-24 h-24 rounded-full object-cover border-4 border-orange-200">
-                                <div>
-                                    <p class="text-xl font-bold">中森 允崇</p>
-                                    <p class="text-sm text-gray-600">JATI-ATI</p>
-                                    <p class="text-sm text-gray-600">EBFAベアフット トレーニングスペシャリスト</p>
-                                </div>
-                            </div>
+                            <p class="text-xl font-bold">中森 允崇</p>
+                            <p class="text-sm text-gray-600 mt-2">JATI-ATI</p>
+                            <p class="text-sm text-gray-600">EBFAベアフット トレーニングスペシャリスト</p>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold border-b-2 border-orange-400 pb-2 mb-4">セミナー詳細</h3>
